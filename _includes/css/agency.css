@@ -301,26 +301,59 @@ header .intro-text .intro-heading {
 }
 
 .marquee {
+    width: 100%;
+    height: 12rem;
+    pointer-events: none;
+    background: black;
+    overflow: hidden;
+    box-shadow: 0 2rem 2rem 0.4rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .marquee__inner-wrap {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .marquee span {
+    text-align: center;
+    color: lightgray;
+    font-weight: 400;
+    white-space: nowrap;
+    font-size: max(2vw, 2.4rem);
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 1vh 1vw 0;
+    text-transform: uppercase;
+  }
+  
+  .marquee__img {
+    width: max(8rem, 12vw);
+    height: 8rem;
+    margin: 0 4vw;
+    border-radius: 100rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #444;
+    filter: grayscale(0.6);
+  }
+  
+  .marquee__inner {
+    height: 100%;
+    width: fit-content;
+    align-items: center;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: end;
- }
- .marquee-content {
-    animation: marquee 6s 0s linear normal infinite;
     position: relative;
-    display: inline-block;
- }
- 
- @keyframes marquee {
-    0% {
-       right: -1rem;
-       transform: translate(100%, 0%);
+    animation: marquee 50s linear infinite;
+    will-change: transform;
+  }
+  
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
     }
-    100% {
-       right: calc(100% + 1rem);
-       transform: translate(0%, 0%);
-    }
- }
+  }
+  
 
 @media(min-width:768px) {
     header .intro-text {
