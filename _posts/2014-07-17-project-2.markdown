@@ -5,11 +5,11 @@ layout: default
 modal-id: 2
 date: 2014-07-15
 img: stock.png
-thumbnail: roundicons-thumbnail.png
+thumbnail: stock.png
 alt: image-alt
 project-date: April 2014
 client: Person's Name
 category: Name of Machine/Vehicle
-description: 
+description: Description of fix.
 
 ---
