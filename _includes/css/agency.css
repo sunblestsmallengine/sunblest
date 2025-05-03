@@ -712,6 +712,10 @@ section h3.section-subheading {
 aside.clients img {
     /* margin: 50px auto; */
 }
+.clients{
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+}
 
 section#contact {
     background-color: #222;
