@@ -722,7 +722,7 @@ aside.clients img {
 section#contact {
     background-color: #222;
     background-image: url('{{ site.baseurl }}/img/calling.png');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
 }
 
