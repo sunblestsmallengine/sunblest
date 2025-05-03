@@ -10,6 +10,6 @@ alt: image-alt
 project-date: April 2014
 client: Person's Name
 category: Name of Machine/Vehicle
-description: 
+description: Description of fix.
 
 ---
