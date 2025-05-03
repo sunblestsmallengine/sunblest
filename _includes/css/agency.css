@@ -732,6 +732,11 @@ section#contact .section-heading {
 
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 section#contact .form-group {
     margin-bottom: 25px;
 }
