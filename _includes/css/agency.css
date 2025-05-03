@@ -713,6 +713,12 @@ section h3.section-subheading {
 aside.clients img {
     margin: 0px;
 }
+
+.shield-logo {
+    max-height:100%; 
+    max-width:100%;
+}
+
 .clients{
     margin-left: 0;
     margin-right: 0;
