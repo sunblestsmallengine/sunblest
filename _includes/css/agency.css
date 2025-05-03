@@ -322,20 +322,20 @@ header .intro-text .intro-heading {
     font-size: max(2vw, 2.4rem);
     line-height: 1.2;
     font-weight: 700;
-    /* padding: 1vh 1vw 0; */
+    padding: 1vh 1vw 0;
     text-transform: uppercase;
   }
   
   .marquee__img {
     width: max(8rem, 12vw);
-    height: 8rem;
+    /* height: 8rem; */
     margin: 0 4vw;
-    border-radius: 100rem;
+    /* border-radius: 100rem; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #444;
-    filter: grayscale(0.6);
+    /* background-color: #444; */
+    /* filter: grayscale(0.6); */
   }
   
   .marquee__inner {
