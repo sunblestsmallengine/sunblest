@@ -715,8 +715,8 @@ aside.clients img {
 }
 
 .shield-logo {
-    max-height:2500%; 
-    max-width:250%;
+    height:100%; 
+    /* max-width:250%; */
 }
 
 .clients{
