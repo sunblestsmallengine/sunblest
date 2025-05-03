@@ -300,10 +300,27 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
-marquee {
+.marquee {
     display: flex;
-    justify-content: space-between;
-}
+    flex-flow: row nowrap;
+    justify-content: end;
+ }
+ .marquee-content {
+    animation: marquee 6s 0s linear normal infinite;
+    position: relative;
+    display: inline-block;
+ }
+ 
+ @keyframes marquee {
+    0% {
+       right: -1rem;
+       transform: translate(100%, 0%);
+    }
+    100% {
+       right: calc(100% + 1rem);
+       transform: translate(0%, 0%);
+    }
+ }
 
 @media(min-width:768px) {
     header .intro-text {
