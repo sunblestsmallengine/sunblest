@@ -328,7 +328,7 @@ header .intro-text .intro-heading {
   
   .marquee__img {
     width: max(8rem, 12vw);
-    height: 8rem;
+    /* height: 8rem; */
     margin: 0 4vw;
     /* border-radius: 100rem; */
     background-size: cover;
