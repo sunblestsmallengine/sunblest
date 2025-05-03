@@ -322,7 +322,7 @@ marquee {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        -webkit-text-stroke: 2px black; /* width and color */
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         font-family: {{ site.data.template.font.primary }};
         text-color: #222;
         font-size: 75px;
