@@ -997,3 +997,64 @@ img {
     }
   }
   
+  /* MOBILE: centre the logo in the navbar, and give the contact panel
+   a solid backdrop matching the phone-graphic’s tan */
+@media (max-width: 767px) {
+    /* 1) turn the header into a flexbox so the brand/logo + menu button vertically align */
+    .navbar-default .navbar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+    }
+    .navbar-default .navbar-brand {
+      margin: 0;
+      /* shrink brand text a bit if needed */
+      font-size: 1.5rem;
+    }
+    .navbar-default .navbar-toggle {
+      margin: 0;
+    }
+  
+    /* 2) contact section: use the same tan as the SVG background, 
+          and center the illustration underneath */
+    section#contact {
+      background-color: #bc996b;       /* ← tweak this hex to exactly match your illustration’s tan */
+      background-image: url('{{ site.baseurl }}/img/calling.png');
+      background-repeat: no-repeat;
+      background-position: center 10px;
+      background-size: 50% auto;       /* make the graphic sit nicely without cropping */
+      padding: 60px 15px;              /* tighten up the vertical padding */
+    }
+    /* centre your heading + phone line */
+    section#contact .section-heading,
+    section#contact .contact-phone {
+      text-align: center;
+      color: #fff;
+    }
+    section#contact .section-heading {
+      margin-bottom: 0.5em;
+      font-size: 1.75rem;
+    }
+    section#contact .contact-phone {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+  
+    /* 3) footer: compress a bit */
+    footer {
+      padding: 15px 10px;
+    }
+    footer span.copyright,
+    footer ul.quicklinks li {
+      font-size: 0.85rem;
+      line-height: 1.2;
+    }
+    ul.social-buttons li a {
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+  
