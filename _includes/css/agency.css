@@ -942,64 +942,9 @@ body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
-/* 1. globally cap image sizes */
-img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* 2. mobile‐only overrides */
-  @media (max-width: 767px) {
-  
-    /* 2a. shrink the shield logo + brand text */
-    .shield-logo {
-      height: 3rem !important;
-    }
-    .navbar-default .navbar-brand {
-      font-size: 1.5rem;
-    }
-  
-    /* 2b. contact section: less padding, center content, scale text */
-    section#contact {
-      padding: 50px 15px;
-      background-size: contain;
-      background-position: center top;
-    }
-    section#contact .section-heading {
-      font-size: 1.75rem;
-      margin-bottom: 0.5em;
-      text-align: center;
-    }
-    /* assume your phone line is in a <p> immediately after the heading */
-    section#contact p {
-      font-size: 1.75rem;
-      text-align: center;
-      margin: 0.25em 0 0.75em;
-    }
-    section#contact .fa-phone {
-      margin-left: 0.5em;
-    }
-  
-    /* 2c. footer: less padding, smaller type + icons */
-    footer {
-      padding: 15px 10px;
-    }
-    footer span.copyright,
-    footer ul.quicklinks li {
-      font-size: 0.85rem;
-      line-height: 1.2;
-    }
-    ul.social-buttons li a {
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-      line-height: 30px;
-    }
-  }
-  
-  /* MOBILE: centre the logo in the navbar, and give the contact panel
+/* MOBILE: centre the logo in the navbar, and give the contact panel
    a solid backdrop matching the phone-graphic’s tan */
-@media (max-width: 767px) {
+   @media (max-width: 767px) {
     /* 1) turn the header into a flexbox so the brand/logo + menu button vertically align */
     .navbar-default .navbar-header {
       display: flex;
