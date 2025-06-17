@@ -942,37 +942,38 @@ body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
-@@media (max-width: 767px) {
-    /* turn the header into a full-width flex container */
+@media (max-width: 767px) {
+    /* 1) make the header a flex container */
     .navbar-default .navbar-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;  /* left / center / right */
+      justify-content: space-between;
       padding: 0.5rem 1rem;
       width: 100%;
     }
   
-    /* 1) logo on left */
-    .shield-logo {
-      height: 3.5rem !important;  /* tweak as desired */
-      width: auto;
+    /* 2) shrink the shield logo */
+    .navbar-default .shield-logo {
+      height: 3.5rem !important;
+      width: auto !important;
     }
   
-    /* 2) brand text in the middle */
+    /* 3) center the brand text between logo & toggle */
     .navbar-default .navbar-brand {
-      flex: 1 1 auto;           /* fill the gap between logo & toggle */
+      flex: 1 1 auto;
+      margin: 0;               /* reset the invalid 0.1 */
       text-align: center;
-      margin: 0.1;                /* reset default bootstrap margins */
-      font-size: 1.5rem;        /* adjust as needed */
-      white-space: nowrap;      /* prevent the text from wrapping */
+      font-size: 1.5rem;
+      white-space: nowrap;
     }
   
-    /* 3) hamburger on right */
+    /* 4) ensure the hamburger stays flush right */
     .navbar-default .navbar-toggle {
       flex: 0 0 auto;
-      margin: 0;                /* it will naturally sit at the right edge */
+      margin: 0;
     }
   }
+  
   
 
   
