@@ -963,7 +963,7 @@ body {
     .navbar-default .navbar-brand {
       flex: 1 1 auto;           /* fill the gap between logo & toggle */
       text-align: center;
-      margin: 0;                /* reset default bootstrap margins */
+      margin: 0.1;                /* reset default bootstrap margins */
       font-size: 1.5rem;        /* adjust as needed */
       white-space: nowrap;      /* prevent the text from wrapping */
     }
