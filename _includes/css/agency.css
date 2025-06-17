@@ -955,7 +955,7 @@ body {
     /* 1) logo on left */
     .shield-logo {
       flex: 0 0 auto;
-      height: 4rem !important;  /* tweak as desired */
+      height: 3.5rem !important;  /* tweak as desired */
       margin: 0;                /* reset any floats */
     }
   
@@ -981,7 +981,7 @@ body {
           always scales to fit and is centered */
     section#contact {
       /* keep your tan base behind it */
-      background-color: #bc996b;                      /* ← adjust to exactly match your art */
+      background-color: #ac885b;                      /* ← adjust to exactly match your art */
       background-image: url('{{ site.baseurl }}/img/calling.png');
       background-repeat: no-repeat;
       background-position: center center;
@@ -997,23 +997,9 @@ body {
       color: #fff;
     }
   
-  }
   
   
   
-    /* 3) Tweak the contact panel’s background so the repairman graphic
-          always scales to fit and is centered */
-          @media (max-width: 767px) {
-            section#contact {
-              background-color: #ac885b;           /* your tan */
-              background-image: url('{{ site.baseurl }}/img/calling.png');
-              background-repeat: no-repeat;
-              background-position: center center;
-              /* force it to always be as wide as the container */
-              background-size: 100% auto;          
-              /* tighten the vertical padding so the block hugs the graphic */
-              padding: 20px 20px;                      
-            }
-          }
+
        
   
