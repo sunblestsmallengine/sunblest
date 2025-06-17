@@ -983,3 +983,27 @@ body {
   
   }
   
+  
+    /* 2) Make the shield logo a bit bigger on small screens */
+    .shield-logo {
+      /* bump this up from 3rem (or whatever your old value was) */
+      height: 4rem !important;
+      width: auto;
+    }
+  
+    /* 3) Tweak the contact panel’s background so the repairman graphic
+          always scales to fit and is centered */
+          @media (max-width: 767px) {
+            section#contact {
+              background-color: #bc996b;           /* your tan */
+              background-image: url('{{ site.baseurl }}/img/calling.png');
+              background-repeat: no-repeat;
+              background-position: center center;
+              /* force it to always be as wide as the container */
+              background-size: 100% auto;          
+              /* tighten the vertical padding so the block hugs the graphic */
+              padding: 20px 0;                      
+            }
+          }
+       
+  
