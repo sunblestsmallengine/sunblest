@@ -956,7 +956,7 @@ body {
     .shield-logo {
       flex: 0 0 auto;
       height: 3.5rem !important;  /* tweak as desired */
-      margin: 0;                /* reset any floats */
+      width: auto;
     }
   
     /* 2) brand text in the middle */
