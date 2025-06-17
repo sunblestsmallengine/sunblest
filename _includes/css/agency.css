@@ -943,37 +943,36 @@ body {
 }
 
 @media (max-width: 767px) {
-    /* 1) make the header a flex container */
+    /* turn the header into a full-width flex container */
     .navbar-default .navbar-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-between;  /* left / center / right */
       padding: 0.5rem 1rem;
       width: 100%;
     }
   
-    /* 2) shrink the shield logo */
-    .navbar-default .shield-logo {
-      height: 3.5rem !important;
-      width: auto !important;
+    /* 1) logo on left */
+    .shield-logo {
+        height: 3.5rem !important;  /* tweak as desired */
+        width: auto;
+      }
+
+     /* 2) brand text in the middle */
+     .navbar-default .navbar-brand {
+        flex: 1 1 auto;           /* fill the gap between logo & toggle */
+        text-align: center;
+        margin: 0;                /* reset default bootstrap margins */
+        font-size: 1.5rem;        /* adjust as needed */
+        white-space: nowrap;      /* prevent the text from wrapping */
+      }
+    
+      /* 3) hamburger on right */
+      .navbar-default .navbar-toggle {
+        flex: 0 0 auto;
+        margin: 0;                /* it will naturally sit at the right edge */
+      }
     }
-  
-    /* 3) center the brand text between logo & toggle */
-    .navbar-default .navbar-brand {
-      flex: 1 1 auto;
-      margin: 0;               /* reset the invalid 0.1 */
-      text-align: center;
-      font-size: 1.5rem;
-      white-space: nowrap;
-    }
-  
-    /* 4) ensure the hamburger stays flush right */
-    .navbar-default .navbar-toggle {
-      flex: 0 0 auto;
-      margin: 0;
-    }
-  }
-  
   
 
   
