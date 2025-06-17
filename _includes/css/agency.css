@@ -954,7 +954,6 @@ body {
   
     /* 1) logo on left */
     .shield-logo {
-      flex: 0 0 auto;
       height: 3.5rem !important;  /* tweak as desired */
       width: auto;
     }
