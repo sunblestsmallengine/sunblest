@@ -942,38 +942,39 @@ body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
-@media (max-width: 767px) {
-    /* 1) Make the header a 3-item flex row */
+@@media (max-width: 767px) {
+    /* turn the header into a full-width flex container */
     .navbar-default .navbar-header {
       display: flex;
       align-items: center;
-      width: 100%;
+      justify-content: space-between;  /* left / center / right */
       padding: 0.5rem 1rem;
+      width: 100%;
     }
   
-    /* 2) Logo first */
-    .navbar-default .shield-logo {
-      order: 1;
+    /* 1) logo on left */
+    .shield-logo {
       flex: 0 0 auto;
-      height: 4rem !important;  /* bump logo size as desired */
-      margin-right: 0.75rem;
+      height: 4rem !important;  /* tweak as desired */
+      margin: 0;                /* reset any floats */
     }
   
-    /* 3) Brand text second */
+    /* 2) brand text in the middle */
     .navbar-default .navbar-brand {
-      order: 2;
-      flex: 1 1 auto;
-      margin: 0;                /* reset any floats/margins */
-      text-align: left;
-      font-size: 1.5rem;        /* shrink/grow as needed */
+      flex: 1 1 auto;           /* fill the gap between logo & toggle */
+      text-align: center;
+      margin: 0;                /* reset default bootstrap margins */
+      font-size: 1.5rem;        /* adjust as needed */
+      white-space: nowrap;      /* prevent the text from wrapping */
     }
   
-    /* 4) Toggle last, pushed to the far right */
+    /* 3) hamburger on right */
     .navbar-default .navbar-toggle {
-      order: 3;
       flex: 0 0 auto;
-      margin-left: auto;        /* pushes it all the way to the right */
+      margin: 0;                /* it will naturally sit at the right edge */
     }
+  }
+  
 
   
     /* 3) Tweak the contact panel’s background so the repairman graphic
@@ -1011,7 +1012,7 @@ body {
               /* force it to always be as wide as the container */
               background-size: 100% auto;          
               /* tighten the vertical padding so the block hugs the graphic */
-              padding: 20px 0;                      
+              padding: 20px 20px;                      
             }
           }
        
