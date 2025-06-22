@@ -1,20 +1,505 @@
----
-layout: default
----
+<!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+<html>
 
-<div class="home">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" type="image/x-icon" href="shield-logo.png">
+</head>
 
-  <h1>Posts</h1>
+<header id="cs-navigation">
+    <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="" class="cs-logo" aria-label="back to home">
+            <img src="sunblest-title.png" alt="logo" width="1000" height="29">
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+            <!--Mobile Nav Toggle-->
+            <button class="cs-toggle" aria-label="mobile menu toggle">
+                <div class="cs-box" aria-hidden="true">
+                    <span class="cs-line cs-line1" aria-hidden="true"></span>
+                    <span class="cs-line cs-line2" aria-hidden="true"></span>
+                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                </div>
+            </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+            <div class="cs-ul-wrapper">
+                <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link cs-active">
+                            Home
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#about" class="cs-li-link">
+                            About
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#services" class="cs-li-link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="#examples" class="cs-li-link">
+                            Examples
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a href="#contact" class="cs-button-solid cs-nav-button">Contact Me</a>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+    </div>
+</header>
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- MAIN PAGE -->
+    <!-- ============================================ -->
+    <!--                     Hero                     -->
+    <!-- ============================================ -->
 
-</div>
+    <section id="hero-1946">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">A Repair Shop at Your Doorstep</h2>
+                <div class="cs-flex">
+                    <p class="cs-text">Sunblest is your trusted mobile small engine repair service, bringing precision and reliability to your doorstep.</p>
+                    <a href="#about" class="cs-button-solid">Read More</a>
+                </div>
+            </div>
+            <picture class="cs-picture">
+                <source media="(min-width: 601px)" srcset="fix.gif">
+                <source media="(max-width: 600px)" srcset="fix.gif">
+                <!-- <img decoding="async" src="fix.gif" alt="construction site" width="1280" height="510"> -->
+                <video autoplay loop muted>
+                    <source src="fix.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  
+            </picture>
+         </div>
+    </section>
+    <!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+<section id="about"></section>
+
+<section id="sbs-1431">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!-- Person Picture -->
+            <!-- To make your own crops of people, use this tool to remove the backgorund of images https://www.remove.bg/ -->
+            <picture class="cs-person">
+                <source media="(max-width: 600px)" srcset="james.jpeg">
+                <source media="(min-width: 601px)" srcset="james.jpeg">
+                <img loading="lazy" decoding="async" src="james.jpeg" alt="James" width="702" height="617" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Who I am</span>
+            <h2 class="cs-title">James Ibey</h2>
+            <p class="cs-text">
+                Sunblest Small Engine Repair is owned and operated by James Ibey, a Hoosier based in Fishers, Indiana. As a father of two college graduates, one from Ball State and the other from Purdue, James understands the value of hard work and dedication. He brings that same energy to every lawnmower, trimmer, or generator he services. With over 30 years of hands-on experience, James has built his reputation on integrity, reliability, and passion for helping people with his skilled technical repair. 
+
+                <br><br>James started Sunblest with one simple goal: to make small engine repair convenient and stress-free. As a mobile repair technician, he comes directly to your home, so you don’t have to haul your equipment to a shop. Whether it’s a quick tune-up or a complex fix, he gets it running and gets it done right.
+
+                <br><br>Awarded the 2024 Nextdoor Neighborhood Favorite, Sunblest is more than a repair service. It’s a neighbor you can trust. Call today!
+            </p>
+                 
+        </div>
+    </div>
+</section>
+                                
+           <!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+<section id="services"></section>
+
+<section id="services-1188">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Services</span>
+            <h2 class="cs-title">I Provide Quality Engine Repair Services</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                            src="logos/annual.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Annual Service</h3>
+                    <p class="cs-item-text">Yearly check up and tailored maintenance package to ensure your engine runs smoothly and reliably all season long.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img src="logos/oilchange.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Oil Change</h3>
+                    <p class="cs-item-text">Drains and replaces old oil to protect your engine and keep it lubricated.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/carb.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Carburetor Cleaning</h3>
+                    <p class="cs-item-text">Removes buildup from the carburetor to improve fuel efficiency and engine performance.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/bladesharp.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Blade Sharpening</h3>
+                    <p class="cs-item-text">Restores the cutting edge of your mower blades for a clean, efficient cut.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                            src="logos/bladereplace.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Blade Replacement</h3>
+                    <p class="cs-item-text">Installs new belts to keep your equipment running without slippage or wear.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/tirerepair.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Tire Repair</h3>
+                    <p class="cs-item-text">Fixes punctured or flat tires to get your equipment rolling again.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/welding.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Welding</h3>
+                    <p class="cs-item-text">Provides strong, lasting repairs for broken or cracked metal parts on your equipment.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/fuelline.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Fuel Line Replacement</h3>
+                    <p class="cs-item-text">Installs new fuel lines to prevent leaks and ensure consistent fuel delivery.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/spark.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Spark Plug Service</h3>
+                    <p class="cs-item-text">Repairs or cleans spark plugs to maintain strong ignition and smooth engine starts.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                            src="logos/cable.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Cable Replacement</h3>
+                    <p class="cs-item-text">Replaces throttle, brake, or drive cables to restore control and functionality.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/elect.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Electrical Repairs</h3>
+                    <p class="cs-item-text">Diagnoses and fixes wiring, switches, and other electrical components to ensure safe operation.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img
+                            src="logos/battery.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Battery Service</h3>
+                    <p class="cs-item-text">Tests, charges, or replaces batteries to guarantee reliable starts.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/pulley.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Pulley Replacement</h3>
+                    <p class="cs-item-text">Replaces worn pulleys to maintain proper drive system function.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/spindle.PNG" loading="lazy"
+                            decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Spindle Service</h3>
+                    <p class="cs-item-text">Repairs or replaces blade spindles for smooth, balanced blade rotation.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <img 
+                            src="logos/deck.PNG"
+                            loading="lazy" decoding="async" alt="icon" width="60" height="60" aria-hidden="true">
+                </picture>
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Deck Leveling</h3>
+                    <p class="cs-item-text">Adjusts mower deck so blades sit at correct height and angle across entire cutting surface.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                                     
+    <!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+<section id="examples"></section>
+
+<section id="RTsbs-459">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Example Repair</span>
+            <h2 class="cs-title">Landscape Renovation And Maintenance </h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
+            </p>
+            <a href="" class="cs-button-solid">Learn More</a>
+        </div>
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg" alt="grass" width="649" height="617">
+        </picture>
+    </div>
+</section>
+                                
+    <!-- ============================================ -->
+    <!--             Side By Side Reverse             -->
+    <!-- ============================================ -->
+
+    <section id="RTsbsr-459">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Example Repair</span>
+                <h2 class="cs-title">Landscape Renovation And Maintenance </h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
+                </p>
+                <a href="" class="cs-button-solid">Learn More</a>
+            </div>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg" alt="grass" width="649" height="617">
+            </picture>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Side By Side Triplet             -->
+    <!-- ============================================ -->
+
+    <section id="RTsbst-459">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Example Repair</span>
+                <h2 class="cs-title">Landscape Renovation And Maintenance </h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
+                </p>
+                <a href="" class="cs-button-solid">Learn More</a>
+            </div>
+            <picture class="cs-picture">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/grass2.jpg" alt="grass" width="649" height="617">
+            </picture>
+        </div>
+        <section id="contact"></section>
+
+    </section>
+    <!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Me</span>
+            <h2 class="cs-title">Get It Fixed With Me Today</h2>
+            <p class="cs-text">
+                Ready to get a repair? Call me and I'll take a look!
+            </p>
+            <a href="tel:13176707561" class="cs-button-solid">Call Me Now</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="backsplash.jpeg">
+        <source media="(min-width: 601px)" srcset="backsplash.jpeg">
+        <img loading="lazy" decoding="async" src="backsplash.jpeg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+    </picture>
+</section>
+                                
+                                
+    <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-274">
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="">
+                <!-- Remove the light class if you don't need the dark logo -->
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="sunblest-title.png" alt="logo" width="240" height="32">
+            </a>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit nextdoor profile" href="https://nextdoor.com/pages/sunblest-small-engine-repair-fishers-in/">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://cdn.iconscout.com/icon/free/png-256/free-nextdoor-icon-download-in-svg-png-gif-file-formats--social-media-brand-logo-company-technology-pack-user-interface-icons-6147205.png?f=webp&w=256" alt="google" width="6" height="6">
+                </a>
+                <a class="cs-social-link" aria-label="visit facebook profile" href="https://www.facebook.com/profile.php?id=61571815937630">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/Facebook.svg" alt="facebook" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="https://www.instagram.com/sunblest__small_engine_repair/">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Social/instagram.svg" alt="instagram" width="11" height="11">
+                </a>
+            </div>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="tel:13176707561">(317) 670-7561</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="mailto:SunblestSmallEngineRepair@gmail.com">SunblestSmallEngineRepair@gmail.com</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Address</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="https://www.google.com/maps/place/10+Sunblest+Ct,+Fishers,+IN+46038/@39.9616185,-86.0359945,1247m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8814b3a26f6c541f:0x6b9c2b1e54ca428c!8m2!3d39.9616185!4d-86.0334196!16s%2Fg%2F11c2b1jnx0?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D">10 Sunblest Ct<br> Fishers, IN 46038</a>
+            </li>
+        </ul>
+        <!-- Contact Info -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Operating Hours</span>
+            </li>
+            <li class="cs-nav-li">
+                Weekdays: 10:00am - 4:00pm
+            </li>
+            <li class="cs-nav-li">
+                Saturday: 9:00am - 12:00pm
+            </li>
+        </ul>
+    </div>
+</footer>
+                                
+    <script>
+
+        // add classes for mobile navigation toggling
+        var CSbody = document.querySelector('body');
+        const CSnavbarMenu = document.querySelector('#cs-navigation');
+        const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
+
+        CShamburgerMenu.addEventListener('click', function () {
+            CShamburgerMenu.classList.toggle('cs-active');
+            CSnavbarMenu.classList.toggle('cs-active');
+            CSbody.classList.toggle('cs-open');
+            // run the function to check the aria-expanded value
+            ariaExpanded();
+        });
+
+        // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
+        function ariaExpanded() {
+            const csUL = document.querySelector('#cs-expanded');
+            const csExpanded = csUL.getAttribute('aria-expanded');
+
+            if (csExpanded === 'false') {
+                csUL.setAttribute('aria-expanded', 'true');
+            } else {
+                csUL.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // mobile nav toggle code
+        const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropdown'));
+        for (const item of dropDowns) {
+            const onClick = () => {
+                item.classList.toggle('cs-active');
+            };
+            item.addEventListener('click', onClick);
+        }
+                                
+    </script>
+
+</html>
