@@ -477,11 +477,11 @@
             CSnavbarMenu.classList.toggle('cs-active');
             CSbody.classList.toggle('cs-open');
             // run the function to check the aria-expanded value
-            ariaExpanded();
+            expand();
         });
 
         // checks the value of aria expanded on the cs-ul and changes it accordingly whether it is expanded or not
-        function ariaExpanded() {
+        function expand() {
             const csUL = document.querySelector('#cs-expanded');
             const csExpanded = csUL.getAttribute('aria-expanded');
 
@@ -502,5 +502,31 @@
         }
                                 
     </script>
+    <script>
+        // grab the hamburger toggle button, the nav wrapper, the body, and the expanded UL
+        const hamburger = document.querySelector('#cs-navigation .cs-toggle');
+        const navWrapper = document.querySelector('#cs-navigation');
+        const pageBody   = document.body;
+        const expandedUL = document.getElementById('cs-expanded');
+      
+        // select every in-menu link *and* the “Contact Me” nav button
+        const linksToClose = [
+          ...document.querySelectorAll('#cs-expanded .cs-li-link'),
+          document.querySelector('#cs-navigation .cs-nav-button')
+        ].filter(Boolean);
+      
+        linksToClose.forEach(link => {
+          link.addEventListener('click', () => {
+            // only do anything if the menu is open
+            if (navWrapper.classList.contains('cs-active')) {
+              hamburger.classList.remove('cs-active');
+              navWrapper.classList.remove('cs-active');
+              pageBody.classList.remove('cs-open');
+              expandedUL.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      </script>
+      
 
 </html>
